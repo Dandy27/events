@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'home_screen.dart';
+
 class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -68,7 +70,10 @@ class SplashScreen extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.all(Radius.circular(6))
               ),
-              child: FlatButton(onPressed: (){},
+              child: FlatButton(
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
